@@ -50,7 +50,7 @@
             .w3-large a {
                 display: block; /* Display the button as a block element */
                 text-align: center; /* Center the button text */
-                padding: 5px 30px; /* Increase right padding for smaller screens and landscape */
+                padding: 5px 20px; /* Reduce right padding for smaller screens */
                 margin-top: 20px; /* Lower the button */
                 font-size: 16px; /* Adjust font size for smaller screens */
             }
@@ -62,6 +62,12 @@
             }
             .w3-large a {
                 margin-left: 10px; /* Adjust the margin to center the button below the logo */
+            }
+        }
+        /* Add margin to the right of the logo in landscape mode */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .logo {
+                margin-right: 40px; /* Add margin to the right of the logo */
             }
         }
     </style>
