@@ -34,7 +34,7 @@
             background-color: #2980b9; /* Darker color on hover */
         }
 
-        /* Adjust styles for smaller screens */
+        /* Adjust styles for smaller screens and landscape orientation */
         @media (max-width: 768px) {
             .w3-jumbo {
                 font-size: 24px; /* Decrease the size for smaller screens */
@@ -44,6 +44,18 @@
             }
             .logo {
                 width: 300px; /* Increase the size of the logo for smaller screens */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+            }
+
+            @media (orientation: landscape) {
+                .bgimg {
+                    background-size: contain; /* Adjust background size for landscape orientation */
+                }
+                .w3-display-bottomleft {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                }
             }
         }
     </style>
@@ -52,7 +64,7 @@
 <div class="bgimg w3-display-container w3-text-white">
     <div class="w3-display-middle w3-jumbo">
         <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">
-            <img src="./FYER SPARX.png" width="300" alt="Vector Download Drawing" class="logo" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"/>
+            <img src="./FYER SPARX.png" width="300" alt="Vector Download Drawing" class="logo" />
         </a>
     </div>
     <div class="w3-display-bottomleft w3-container">
