@@ -59,6 +59,12 @@
                 margin-left: 10px; /* Adjust the margin to center the button below the logo */
             }
         }
+        /* Adjust styles for portrait orientation */
+        @media (max-width: 768px) and (orientation: portrait) {
+            .w3-large a {
+                width: auto; /* Allow button text to wrap to the next line */
+            }
+        }
     </style>
 </head>
 <body>
@@ -66,10 +72,10 @@
     <div class="w3-display-middle w3-jumbo">
         <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">
             <img src="./FYER SPARX.png" width="300" alt="Vector Download Drawing" class="logo" />
+            <div class="w3-large">
+                <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">Amazon Store Page</a>
+            </div>
         </a>
-        <div class="w3-large">
-            <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">Amazon Store Page</a>
-        </div>
     </div>
 </div>
 </body>
