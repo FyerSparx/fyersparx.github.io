@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>FYER SPARX</title>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.amazon.ca; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; connect-src 'self' https://www.amazon.ca;">
     <style>
         body, h1, h5 {
             font-family: "Raleway", sans-serif;
@@ -20,16 +20,43 @@
             background-position: center;
             background-size: cover;
         }
+        /* Style the link for better visibility */
         .w3-large a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px 20px;
-            background-color: #3498db;
-            border-radius: 5px;
-            transition: background-color 0.3s ease-in-out;
+            text-decoration: none; /* Remove underline */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Add some padding */
+            background-color: #3498db; /* Background color */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease-in-out; /* Smooth transition */
         }
+        /* Change link background color on hover */
         .w3-large a:hover {
-            background-color: #2980b9;
+            background-color: #2980b9; /* Darker color on hover */
+        }
+
+        /* Adjust styles for smaller screens and center button below the logo on larger screens */
+        @media (max-width: 768px) {
+            .w3-jumbo {
+                font-size: 24px; /* Decrease the size for smaller screens */
+            }
+            .logo {
+                width: 300px; /* Increase the size of the logo for smaller screens */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+            }
+            .w3-large a {
+                display: block; /* Display the button as a block element */
+                text-align: center; /* Center the button text */
+                padding: 5px 10px; /* Reduce padding for smaller screens */
+            }
+        }
+        /* Center the button below the logo on larger screens */
+        @media (min-width: 769px) {
+            .w3-display-middle {
+                text-align: center;
+            }
+            .w3-large a {
+                margin-left: 10px; /* Adjust the margin to center the button below the logo */
+            }
         }
     </style>
 </head>
@@ -37,7 +64,7 @@
 <div class="bgimg w3-display-container w3-text-white">
     <div class="w3-display-middle w3-jumbo">
         <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">
-            <img src="./FYER SPARX.png" width="300" alt="Vector Download Drawing" class="logo" />
+            <img src="./FYER%20SPARX.png" width="300" alt="Vector Download Drawing" class="logo" />
         </a>
         <div class="w3-large">
             <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">Amazon Store Page</a>
