@@ -34,7 +34,7 @@
             background-color: #2980b9; /* Darker color on hover */
         }
 
-        /* Adjust styles for smaller screens and landscape orientation */
+        /* Adjust styles for smaller screens */
         @media (max-width: 768px) {
             .w3-jumbo {
                 font-size: 24px; /* Decrease the size for smaller screens */
@@ -43,19 +43,10 @@
                 width: 300px; /* Increase the size of the logo for smaller screens */
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
             }
-
-            @media (orientation: landscape) {
-                .bgimg {
-                    background-size: cover; /* Adjust back to 'cover' to prevent repetition in landscape orientation */
-                }
-                .w3-display-bottomleft {
-                    position: absolute;
-                    bottom: 10px;
-                    left: 10px;
-                }
-                .w3-large a {
-                    padding: 5px 10px; /* Reduce padding for smaller screens in landscape orientation */
-                }
+            .w3-large a {
+                display: block; /* Display the button as a block element */
+                text-align: center; /* Center the button text */
+                padding: 5px 10px; /* Reduce padding for smaller screens */
             }
         }
     </style>
@@ -66,12 +57,9 @@
         <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">
             <img src="./FYER SPARX.png" width="300" alt="Vector Download Drawing" class="logo" />
         </a>
-    </div>
-    <div class="w3-display-bottomleft w3-container">
-        <p class="w3-xlarge">FYER SPARX</p>
-        <p class="w3-large">
+        <div class="w3-large">
             <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">Amazon Store Page</a>
-        </p>
+        </div>
     </div>
 </div>
 </body>
