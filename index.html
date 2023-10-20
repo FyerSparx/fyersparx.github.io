@@ -33,6 +33,10 @@
         .w3-large a:hover {
             background-color: #2980b9; /* Darker color on hover */
         }
+        /* Disable pointer events for images to prevent visual search and editing */
+        img {
+            pointer-events: none;
+        }
 
         /* Adjust styles for smaller screens and center button below the logo on larger screens */
         @media (max-width: 768px) {
@@ -43,9 +47,6 @@
                 width: 170px; /* Smaller logo for smaller screens */
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
                 margin-top: 50px; /* Lower the logo */
-            }
-            .logo:hover {
-                pointer-events: none; /* Disable pointer events to prevent visual search and image editing */
             }
             .w3-large a {
                 display: block; /* Display the button as a block element */
