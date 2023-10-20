@@ -76,9 +76,15 @@
             }
         }
         /* Center the button under the logo in landscape mode */
-        @media (max-width: 768px) and (orientation: landscape), (max-width: 1024px) and (orientation: landscape) {
+        @media (max-width: 768px) and (orientation: landscape) {
             .w3-large {
                 text-align: center;
+            }
+        }
+        /* Adjust for larger phones in landscape mode */
+        @media (max-width: 1024px) and (orientation: landscape) {
+            .w3-large a {
+                font-size: 12px; /* Decrease font size for the button */
             }
         }
     </style>
