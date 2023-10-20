@@ -42,6 +42,7 @@
         @media (max-width: 768px) {
             .w3-jumbo {
                 font-size: 24px; /* Decrease the size for smaller screens */
+                margin-right: 10px; /* Add margin to the right of the logo */
             }
             .logo {
                 width: 170px; /* Smaller logo for smaller screens */
@@ -79,6 +80,19 @@
         @media (max-width: 768px) and (orientation: landscape) {
             .w3-large {
                 text-align: center;
+            }
+        }
+        /* Adjust for larger phones in landscape mode like Galaxy A50 */
+        @media (max-width: 768px) and (orientation: landscape) and (max-height: 450px) {
+            .w3-jumbo {
+                font-size: 24px; /* Adjust font size for larger phones in landscape mode */
+            }
+            .logo {
+                width: 150px; /* Smaller logo for larger phones in landscape mode */
+                margin-right: 10px; /* Add margin to the right of the logo */
+            }
+            .w3-large a {
+                font-size: 12px; /* Decrease font size for the button */
             }
         }
     </style>
