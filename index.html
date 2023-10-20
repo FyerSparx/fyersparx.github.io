@@ -34,7 +34,7 @@
             background-color: #2980b9; /* Darker color on hover */
         }
 
-        /* Adjust styles for smaller screens */
+        /* Adjust styles for smaller screens and center button below the logo on larger screens */
         @media (max-width: 768px) {
             .w3-jumbo {
                 font-size: 24px; /* Decrease the size for smaller screens */
@@ -47,6 +47,15 @@
                 display: block; /* Display the button as a block element */
                 text-align: center; /* Center the button text */
                 padding: 5px 10px; /* Reduce padding for smaller screens */
+            }
+        }
+        /* Center the button below the logo on larger screens */
+        @media (min-width: 769px) {
+            .w3-display-middle {
+                text-align: center;
+            }
+            .w3-large a {
+                margin-left: 10px; /* Adjust the margin to center the button below the logo */
             }
         }
     </style>
