@@ -2,45 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="FYER SPARX - Premium Outdoor Lighters for all your adventures." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self' 'unsafe-inline'; font-src https://fonts.googleapis.com; connect-src 'none';">
     <title>FYER SPARX - Ignite Every Moment</title>
 
     <style>
+        /* General Styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth; /* Smooth scrolling */
         }
 
         html, body {
             height: 100%;
             overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
         }
 
         body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            font-family: 'Arial', sans-serif;
-            background-color: black;
         }
 
+        /* Hero Section Styling */
         .hero {
             background-image: url('./2H2A6149.png');
             background-size: cover;
             background-position: center;
-            flex: 1; /* Ensures this section fills the remaining space */
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
             position: relative;
-            animation: fadeIn 1.5s ease-in-out;
             padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .hero::after {
@@ -54,28 +55,17 @@
             z-index: 1;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .hero-content {
             position: relative;
             z-index: 2;
-            width: 100%;
             max-width: 600px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-        .logo img {
-            max-width: 160px;
-            margin: 0 auto 20px;
+            animation: slideUp 1s ease-out;
         }
 
         h1 {
             font-size: 3rem;
-            font-weight: bold;
             margin-bottom: 15px;
         }
 
@@ -92,30 +82,27 @@
             cursor: pointer;
             font-size: 1.2rem;
             margin-bottom: 15px;
-            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         .btn:hover {
             background-color: #e68a00;
             transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(255, 153, 0, 0.6);
         }
 
         .secondary-links {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin: 20px 0;
+            margin-top: 10px;
         }
 
         .secondary-links a {
             display: inline-block;
             padding: 10px 20px;
             border: 2px solid #ff9900;
-            border-radius: 5px;
             color: #ff9900;
             text-decoration: none;
-            font-size: 1rem;
             transition: background-color 0.3s, color 0.3s;
         }
 
@@ -124,23 +111,38 @@
             color: black;
         }
 
+        /* Footer Styling */
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 5px 0;
+            color: white;
+            font-size: 0.75rem;
+        }
+
         .x-logo {
             margin-top: 20px;
         }
 
         .x-logo img {
-            width: 50px;
-            height: 50px;
-            display: block;
-            margin: 0 auto;
+            width: 30px;
+            height: auto;
+            transition: transform 0.3s;
         }
 
-        footer {
-            text-align: center;
-            color: white;
-            font-size: 0.9rem;
-            padding: 10px 0;
-            background-color: rgba(0, 0, 0, 0.5);
+        .x-logo img:hover {
+            transform: rotate(360deg);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         @media (max-width: 768px) {
@@ -159,15 +161,14 @@
             }
         }
     </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <div class="hero">
         <div class="hero-content">
-            <div class="logo">
-                <img src="./fyer-sparx.png" alt="FYER SPARX Logo" loading="lazy" />
-            </div>
-
             <h1>Ignite Every Moment</h1>
             <p>Discover premium outdoor lighters built for all adventures.</p>
 
@@ -176,19 +177,22 @@
             </a>
 
             <div class="secondary-links">
-                <a href="https://www.amazon.ca/stores/page/6672646D-DC00-48E5-A62E-CF7719F47EEB?ingress=0&visitId=bee9639b-76f7-4076-bbf9-61b637c3c57a">Browse Our Torch Lighter</a>
-                <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR/ref=pd_ci_mcx_mh_mcx_views_0">Visit Our Store</a>
+                <a href="https://www.amazon.ca/stores/page/6672646D-DC00-48E5-A62E-CF7719F47EEB" target="_blank" rel="noopener noreferrer">Browse Our Torch Lighter</a>
+                <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR" target="_blank" rel="noopener noreferrer">Visit Our Store</a>
             </div>
 
             <div class="x-logo">
                 <a href="https://x.com/FyerSparx_Ltd" target="_blank" rel="noopener noreferrer">
-                    <img src="./logo-white.png" alt="X.com Logo" />
+                    <img src="./logo-white.png" alt="X.com Logo">
                 </a>
             </div>
         </div>
     </div>
 
-    <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
+    <footer>
+        <p>&copy; 2024 FYER SPARX. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
