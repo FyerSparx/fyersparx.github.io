@@ -21,7 +21,6 @@
     <meta name="twitter:url" content="https://fyersparx.ca/?v=1">
 
     <script>
-        // Ensure cache busting for iOS and GitHub Pages users
         window.onload = function () {
             const currentUrl = window.location.href;
             if (!currentUrl.includes('?v=1')) {
@@ -41,25 +40,25 @@
 
         html, body {
             height: 100%;
-            overflow-x: hidden;
+            overflow: hidden;
             font-family: 'Arial', sans-serif;
             background-color: black;
             color: white;
         }
 
-        /* Hero Section */
+        /* Ensure hero section fills the entire viewport */
         .hero {
             background-image: url('./2H2A6149.png?v=1');
             background-size: cover;
             background-position: center;
-            flex: 1;
+            width: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
             position: relative;
-            padding: 20px;
             animation: fadeIn 2s ease-in-out;
         }
 
