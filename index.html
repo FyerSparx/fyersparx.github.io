@@ -15,18 +15,24 @@
             scroll-behavior: smooth; /* Smooth scrolling */
         }
 
-        body, html {
+        html, body {
             height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             font-family: 'Arial', sans-serif;
             background-color: black;
-            overflow-x: hidden;
         }
 
         .hero {
             background-image: url('./2H2A6149.png');
             background-size: cover;
             background-position: center;
-            min-height: 100vh;
+            flex: 1; /* Ensures this section fills the remaining space */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -34,7 +40,7 @@
             text-align: center;
             position: relative;
             animation: fadeIn 1.5s ease-in-out;
-            padding: 20px; /* Padding ensures no squishing */
+            padding: 20px;
         }
 
         .hero::after {
@@ -130,10 +136,11 @@
         }
 
         footer {
-            margin-top: 10px;
             text-align: center;
             color: white;
             font-size: 0.9rem;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 768px) {
@@ -178,10 +185,10 @@
                     <img src="./logo-white.png" alt="X.com Logo" />
                 </a>
             </div>
-
-            <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
         </div>
     </div>
+
+    <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
 </body>
 
 </html>
