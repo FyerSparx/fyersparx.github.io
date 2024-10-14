@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self' 'unsafe-inline'; font-src https://fonts.googleapis.com; connect-src 'none';">
     <title>FYER SPARX - Ignite Every Moment</title>
 
     <!-- Open Graph Meta Tags -->
@@ -14,7 +13,7 @@
     <meta property="og:url" content="https://fyersparx.ca">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card Tags -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FYER SPARX - Ignite Every Moment">
     <meta name="twitter:description" content="Discover premium outdoor lighters built for all adventures.">
@@ -22,7 +21,6 @@
     <meta name="twitter:url" content="https://fyersparx.ca">
 
     <style>
-        /* General Styling */
         * {
             margin: 0;
             padding: 0;
@@ -32,17 +30,17 @@
         html, body {
             height: 100%;
             overflow-x: hidden;
-            font-family: 'Poppins', sans-serif;
-            background-color: black;
         }
 
         body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
         }
 
-        /* Hero Section Styling */
+        /* Hero Section */
         .hero {
             background-image: url('./2H2A6149.png');
             background-size: cover;
@@ -55,7 +53,7 @@
             text-align: center;
             position: relative;
             padding: 20px;
-            animation: fadeIn 1.5s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .hero::after {
@@ -75,7 +73,6 @@
             max-width: 600px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            animation: slideUp 1s ease-out;
         }
 
         h1 {
@@ -125,15 +122,6 @@
             color: black;
         }
 
-        /* Footer Styling */
-        footer {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 5px 0;
-            color: white;
-            font-size: 0.75rem;
-        }
-
         .x-logo {
             margin-top: 20px;
         }
@@ -141,22 +129,26 @@
         .x-logo img {
             width: 30px;
             height: auto;
-            transition: transform 0.3s;
+            cursor: pointer;
         }
 
-        .x-logo img:hover {
-            transform: rotate(360deg);
+        footer {
+            background-color: #1c1c1c;
+            text-align: center;
+            padding: 10px 0;
+            color: #ccc;
+            font-size: 0.75rem;
         }
 
-        /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 768px) {
@@ -175,28 +167,25 @@
             }
         }
     </style>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <div class="hero">
         <div class="hero-content">
             <h1>Ignite Every Moment</h1>
             <p>Discover premium outdoor lighters built for all adventures.</p>
 
-            <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369" target="_blank">
                 <button class="btn">Shop on Amazon</button>
             </a>
 
             <div class="secondary-links">
-                <a href="https://www.amazon.ca/stores/page/6672646D-DC00-48E5-A62E-CF7719F47EEB" target="_blank" rel="noopener noreferrer">Browse Our Torch Lighter</a>
-                <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR" target="_blank" rel="noopener noreferrer">Visit Our Store</a>
+                <a href="https://www.amazon.ca/stores/page/6672646D-DC00-48E5-A62E-CF7719F47EEB">Browse Our Torch Lighter</a>
+                <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR">Visit Our Store</a>
             </div>
 
             <div class="x-logo">
-                <a href="https://x.com/FyerSparx_Ltd" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/FyerSparx_Ltd" target="_blank">
                     <img src="./logo-white.png" alt="X.com Logo">
                 </a>
             </div>
@@ -206,7 +195,6 @@
     <footer>
         <p>&copy; 2024 FYER SPARX. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>
