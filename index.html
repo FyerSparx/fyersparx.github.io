@@ -113,59 +113,33 @@
             box-shadow: 0 4px 12px rgba(255, 153, 0, 0.6);
         }
 
-        .secondary-links {
+        .social-buttons {
             margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
-        .secondary-links a {
+        .social-buttons a {
             display: inline-block;
-            margin: 0 10px;
-            color: #ff9900;
-            text-decoration: none;
-            font-size: 1rem;
+            background-color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, box-shadow 0.2s;
         }
 
-        .secondary-links a:hover {
-            text-decoration: underline;
+        .social-buttons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
-
-            .logo img {
-                max-width: 120px;
-            }
-
-            .hero-content {
-                padding: 10px;
-            }
-        }
-
-        @media (orientation: landscape) and (max-height: 500px) {
-            .hero {
-                background-position: top;
-            }
-
-            .hero-content {
-                max-width: 90%;
-                margin-top: 10px;
-            }
-
-            .logo img {
-                max-width: 100px;
-            }
-
-            .btn {
-                font-size: 1rem;
-                padding: 8px 16px;
-            }
+        .social-buttons img {
+            width: 24px;
+            height: 24px;
         }
 
         footer {
@@ -201,6 +175,13 @@
                 <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR/ref=pd_ci_mcx_mh_mcx_views_0" 
                    target="_blank" 
                    rel="noopener noreferrer">Visit Our Store</a>
+            </div>
+
+            <!-- Social Media Button for X -->
+            <div class="social-buttons">
+                <a href="https://x.com/FyerSparx_Ltd" target="_blank" rel="noopener noreferrer" title="Follow us on X">
+                    <img src="./logo-black.png" alt="X Logo">
+                </a>
             </div>
         </div>
     </div>
