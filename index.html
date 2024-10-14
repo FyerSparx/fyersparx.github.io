@@ -10,7 +10,7 @@
     <meta property="og:title" content="FYER SPARX - Ignite Every Moment">
     <meta property="og:description" content="Discover premium outdoor lighters built for all adventures.">
     <meta property="og:image" content="https://fyersparx.ca/fyer-sparx.png?v=1">
-    <meta property="og:url" content="https://fyersparx.ca">
+    <meta property="og:url" content="https://fyersparx.ca/?v=1">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
@@ -18,16 +18,16 @@
     <meta name="twitter:title" content="FYER SPARX - Ignite Every Moment">
     <meta name="twitter:description" content="Discover premium outdoor lighters built for all adventures.">
     <meta name="twitter:image" content="https://fyersparx.ca/fyer-sparx.png?v=1">
-    <meta name="twitter:url" content="https://fyersparx.ca">
+    <meta name="twitter:url" content="https://fyersparx.ca/?v=1">
 
     <script>
-        // JavaScript to append ?v=1 if not present in the URL
+        // Ensure cache busting for iOS and GitHub Pages users
         window.onload = function () {
             const currentUrl = window.location.href;
             if (!currentUrl.includes('?v=1')) {
-                window.location.href = currentUrl.includes('?')
-                    ? currentUrl + '&v=1'
-                    : currentUrl + '?v=1';
+                window.location.replace(currentUrl.includes('?') 
+                    ? currentUrl + '&v=1' 
+                    : currentUrl + '?v=1');
             }
         };
     </script>
@@ -42,14 +42,9 @@
         html, body {
             height: 100%;
             overflow-x: hidden;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             font-family: 'Arial', sans-serif;
             background-color: black;
+            color: white;
         }
 
         /* Hero Section */
@@ -83,7 +78,6 @@
             position: relative;
             z-index: 2;
             max-width: 600px;
-            color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
