@@ -14,7 +14,7 @@
         }
 
         html {
-            scroll-behavior: smooth; /* Enable smooth scrolling */
+            scroll-behavior: smooth;
         }
 
         body, html {
@@ -22,15 +22,15 @@
             font-family: 'Arial', sans-serif;
             background-color: black;
             margin: 0;
-            overflow-y: auto; /* Allow scrolling */
-            overscroll-behavior: contain; /* Prevent scrolling glitches on mobile */
+            overflow-y: auto;
+            overscroll-behavior: contain;
         }
 
         .hero {
             background-image: url('./2H2A6149.png');
             background-size: cover;
             background-position: center;
-            min-height: 100vh; /* Ensure it fills the viewport */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -47,7 +47,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+            background: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
 
@@ -63,8 +63,8 @@
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             animation: fadeUp 2s ease-out;
-            max-width: 90%; /* Ensure content fits well on all screens */
-            padding: 20px; /* Add padding to avoid content cutting off */
+            max-width: 90%;
+            padding: 20px;
         }
 
         @keyframes fadeUp {
@@ -73,7 +73,7 @@
         }
 
         .logo {
-            background: rgba(255, 255, 255, 0.15); /* Transparent background */
+            background: rgba(255, 255, 255, 0.15);
             padding: 10px 20px;
             border-radius: 12px;
             margin-bottom: 15px;
@@ -83,7 +83,7 @@
             max-width: 160px;
             display: block;
             margin: auto;
-            filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8)); /* Glow effect */
+            filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8));
         }
 
         .hero h1 {
@@ -129,7 +129,6 @@
             text-decoration: underline;
         }
 
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -145,13 +144,13 @@
             }
 
             .hero-content {
-                padding: 10px; /* Extra padding for smaller screens */
+                padding: 10px;
             }
         }
 
         @media (orientation: landscape) and (max-height: 500px) {
             .hero {
-                background-position: top; /* Adjust background for landscape mode */
+                background-position: top;
             }
 
             .hero-content {
@@ -160,7 +159,7 @@
             }
 
             .logo img {
-                max-width: 100px; /* Smaller logo for landscape mode */
+                max-width: 100px;
             }
 
             .btn {
@@ -196,8 +195,12 @@
             </a>
 
             <div class="secondary-links">
-                <a href="https://www.amazon.ca/dp/B08ZQMGXQM">Browse Our Torch Lighter</a>
-                <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">Visit Our Store</a>
+                <a href="https://www.amazon.ca/stores/page/6672646D-DC00-48E5-A62E-CF7719F47EEB?ingress=0&visitId=bee9639b-76f7-4076-bbf9-61b637c3c57a" 
+                   target="_blank" 
+                   rel="noopener noreferrer">Browse Our Torch Lighter</a>
+                <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR/ref=pd_ci_mcx_mh_mcx_views_0" 
+                   target="_blank" 
+                   rel="noopener noreferrer">Visit Our Store</a>
             </div>
         </div>
     </div>
