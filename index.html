@@ -13,19 +13,24 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
             background-color: black;
             margin: 0;
-            overflow: hidden;
+            overflow-y: auto; /* Allow scrolling */
+            overscroll-behavior: contain; /* Prevent scrolling glitches on mobile */
         }
 
         .hero {
             background-image: url('./2H2A6149.png');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            min-height: 100vh; /* Ensure it fills the viewport */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -42,7 +47,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Slight dark overlay for better readability */
+            background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
             z-index: 1;
         }
 
@@ -58,8 +63,8 @@
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             animation: fadeUp 2s ease-out;
-            max-width: 80%; /* Ensure the content doesn't overflow */
-            margin: auto;
+            max-width: 90%; /* Ensure content fits well on all screens */
+            padding: 20px; /* Add padding to avoid content cutting off */
         }
 
         @keyframes fadeUp {
@@ -71,7 +76,7 @@
             background: rgba(255, 255, 255, 0.15); /* Transparent background */
             padding: 10px 20px;
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .logo img {
@@ -140,18 +145,18 @@
             }
 
             .hero-content {
-                padding: 10px; /* Add padding for smaller screens */
+                padding: 10px; /* Extra padding for smaller screens */
             }
         }
 
         @media (orientation: landscape) and (max-height: 500px) {
             .hero {
-                background-position: top; /* Adjust background for landscape */
+                background-position: top; /* Adjust background for landscape mode */
             }
 
             .hero-content {
-                max-width: 90%; /* Allow more space for content */
-                margin-top: 10px; /* Slightly adjust vertical spacing */
+                max-width: 90%;
+                margin-top: 10px;
             }
 
             .logo img {
@@ -160,15 +165,13 @@
 
             .btn {
                 font-size: 1rem;
-                padding: 8px 16px; /* Compact button for landscape */
+                padding: 8px 16px;
             }
         }
 
         footer {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            margin-top: 20px;
             color: white;
             font-size: 0.9rem;
             text-align: center;
