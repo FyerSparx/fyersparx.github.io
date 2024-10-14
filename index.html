@@ -20,7 +20,6 @@
             font-family: 'Arial', sans-serif;
             background-color: black;
             overflow-x: hidden;
-            overflow-y: auto;
         }
 
         .hero {
@@ -29,13 +28,13 @@
             background-position: center;
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             text-align: center;
             position: relative;
             animation: fadeIn 1.5s ease-in-out;
-            padding-bottom: 100px; /* Extra bottom space */
+            padding: 20px; /* Padding ensures no squishing */
         }
 
         .hero::after {
@@ -57,27 +56,21 @@
         .hero-content {
             position: relative;
             z-index: 2;
+            width: 100%;
+            max-width: 600px;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            animation: fadeUp 2s ease-out;
-            margin-bottom: 50px; /* Spacing between sections */
-        }
-
-        @keyframes fadeUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
         }
 
         .logo img {
             max-width: 160px;
-            display: block;
-            margin: auto;
+            margin: 0 auto 20px;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         p {
@@ -104,8 +97,9 @@
 
         .secondary-links {
             display: flex;
+            justify-content: center;
             gap: 10px;
-            margin-top: 10px;
+            margin: 20px 0;
         }
 
         .secondary-links a {
@@ -131,13 +125,12 @@
         .x-logo img {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
             display: block;
             margin: 0 auto;
         }
 
         footer {
-            margin-top: 20px;
+            margin-top: 10px;
             text-align: center;
             color: white;
             font-size: 0.9rem;
@@ -153,13 +146,8 @@
                 font-size: 1rem;
             }
 
-            .logo img {
-                max-width: 120px;
-            }
-
             .secondary-links {
                 flex-direction: column;
-                align-items: center;
                 gap: 5px;
             }
         }
@@ -190,9 +178,9 @@
                     <img src="./logo-white.png" alt="X.com Logo" />
                 </a>
             </div>
-        </div>
 
-        <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
+            <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
+        </div>
     </div>
 </body>
 
