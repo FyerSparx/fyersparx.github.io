@@ -1,113 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>FYER SPARX</title>
-
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FYER SPARX - Premium Outdoor Lighters for all your adventures." />
+    <title>FYER SPARX - Ignite Every Moment</title>
+
     <style>
-        body, h1, h5 {
-            font-family: "Raleway", sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
         body, html {
             height: 100%;
-        }
-        .bgimg {
-            background-image: url("./2H2A6149.png");
-            min-height: 100%;
-            background-position: center;
-            background-size: cover;
-        }
-        /* Style the link for better visibility */
-        .w3-large a {
-            text-decoration: none; /* Remove underline */
-            color: #fff; /* Text color */
-            padding: 8px 16px; /* Add some padding */
-            background-color: #FF0000; /* Red background color for the button */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s ease-in-out; /* Smooth transition */
-        }
-        /* Change link background color on hover */
-        .w3-large a:hover {
-            background-color: #2980b9; /* Darker color on hover */
-        }
-        /* Disable pointer events for images to prevent visual search and editing */
-        img {
-            pointer-events: none;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
         }
 
-        /* Adjust styles for smaller screens and center button below the logo on larger screens */
+        .hero {
+            background-image: url('./2H2A6149.png'); /* Path confirmed */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Overlay for better contrast */
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: fadeUp 2s ease-out;
+            max-width: 80%; /* Ensures content doesn't overflow */
+            margin: auto;
+        }
+
+        @keyframes fadeUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logo {
+            background: rgba(255, 255, 255, 0.15); /* Transparent background */
+            padding: 10px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 160px; /* Proper size scaling */
+            display: block;
+            margin: auto;
+            filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8)); /* Glow effect */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background-color: #ff9900;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 153, 0, 0.6);
+        }
+
+        .secondary-links {
+            margin-top: 15px;
+        }
+
+        .secondary-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #ff9900;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .secondary-links a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
-            .w3-jumbo {
-                font-size: 24px; /* Decrease the size for smaller screens */
-                margin-right: 10px; /* Add margin to the right of the logo */
+            .hero h1 {
+                font-size: 2.5rem;
             }
-            .logo {
-                width: 170px; /* Smaller logo for smaller screens */
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
-                margin-top: 50px; /* Lower the logo */
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
             }
-            .w3-large a {
-                display: block; /* Display the button as a block element */
-                text-align: center; /* Center the button text */
-                padding: 5px 10px; /* Reduce padding for smaller screens */
-                margin-top: 20px; /* Lower the button */
-                font-size: 14px; /* Adjust font size for smaller screens */
-                margin-left: 0; /* Reset margin-left for button */
+
+            .logo img {
+                max-width: 120px; /* Adjust for smaller screens */
             }
         }
-        /* Center the button below the logo on larger screens */
-        @media (min-width: 769px) {
-            .w3-display-middle {
-                text-align: center;
-            }
-            .w3-large a {
-                margin-left: 0; /* Reset margin-left for button */
-            }
-        }
-        /* Add margin to the right of the logo in landscape mode */
-        @media (max-width: 768px) and (orientation: landscape) {
-            .logo {
-                margin-right: 20px; /* Add margin to the right of the logo */
-            }
-            .w3-large a {
-                font-size: 12px; /* Decrease font size for the button */
-            }
-        }
-        /* Center the button under the logo in landscape mode */
-        @media (max-width: 768px) and (orientation: landscape) {
-            .w3-large {
-                text-align: center;
-            }
-        }
-        /* Adjust for larger phones in landscape mode like Galaxy A50 */
-        @media (max-width: 768px) and (orientation: landscape) and (max-height: 450px) {
-            .w3-jumbo {
-                font-size: 24px; /* Adjust font size for larger phones in landscape mode */
-                margin-right: 10px; /* Add margin to the right of the logo */
-            }
-            .logo {
-                width: 150px; /* Smaller logo for larger phones in landscape mode */
-                margin-right: 10px; /* Add margin to the right of the logo */
-            }
-            .w3-large a {
-                font-size: 14px; /* Adjust font size for the button */
-            }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 0.9rem;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-<div class="bgimg w3-display-container w3-text-white">
-    <div class="w3-display-middle w3-jumbo">
-        <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">
-            <img src="./FYER SPARX.png" width="300" alt="Vector Download Drawing" class="logo" />
-        </a>
-        <div class="w3-large">
-            <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">Amazon Store</a>
+
+    <div class="hero">
+        <div class="hero-content">
+            <div class="logo">
+                <img src="./fyer-sparx.png" alt="FYER SPARX Logo" loading="lazy" />
+            </div>
+
+            <h1>Ignite Every Moment</h1>
+            <p>Discover premium outdoor lighters built for all adventures.</p>
+
+            <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <button class="btn">Shop on Amazon</button>
+            </a>
+
+            <div class="secondary-links">
+                <a href="https://www.amazon.ca/dp/B08ZQMGXQM">Browse Our Torch Lighter</a>
+                <a href="https://www.amazon.ca/stores/page/66BF079B-90E1-4388-9CC6-25F3054FC369">Visit Our Store</a>
+            </div>
         </div>
     </div>
-</div>
+
+    <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
+
 </body>
 </html>
