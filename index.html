@@ -9,7 +9,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="FYER SPARX - Ignite Every Moment">
     <meta property="og:description" content="Discover premium outdoor lighters built for all adventures.">
-    <meta property="og:image" content="https://fyersparx.ca/fyer-sparx.png">
+    <meta property="og:image" content="https://fyersparx.ca/fyer-sparx.png?v=1">
     <meta property="og:url" content="https://fyersparx.ca">
     <meta property="og:type" content="website">
 
@@ -17,8 +17,20 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FYER SPARX - Ignite Every Moment">
     <meta name="twitter:description" content="Discover premium outdoor lighters built for all adventures.">
-    <meta name="twitter:image" content="https://fyersparx.ca/fyer-sparx.png">
+    <meta name="twitter:image" content="https://fyersparx.ca/fyer-sparx.png?v=1">
     <meta name="twitter:url" content="https://fyersparx.ca">
+
+    <script>
+        // JavaScript to append ?v=1 if not present in the URL
+        window.onload = function () {
+            const currentUrl = window.location.href;
+            if (!currentUrl.includes('?v=1')) {
+                window.location.href = currentUrl.includes('?')
+                    ? currentUrl + '&v=1'
+                    : currentUrl + '?v=1';
+            }
+        };
+    </script>
 
     <style>
         * {
@@ -42,7 +54,7 @@
 
         /* Hero Section */
         .hero {
-            background-image: url('./2H2A6149.png');
+            background-image: url('./2H2A6149.png?v=1');
             background-size: cover;
             background-position: center;
             flex: 1;
@@ -186,7 +198,7 @@
 
             <div class="x-logo">
                 <a href="https://x.com/FyerSparx_Ltd" target="_blank">
-                    <img src="./logo-white.png" alt="X.com Logo">
+                    <img src="./logo-white.png?v=1" alt="X.com Logo">
                 </a>
             </div>
         </div>
