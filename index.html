@@ -12,20 +12,22 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
 
         body, html {
             height: 100%;
             font-family: 'Arial', sans-serif;
             background-color: black;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         .hero {
             background-image: url('./2H2A6149.png');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -33,6 +35,7 @@
             text-align: center;
             position: relative;
             animation: fadeIn 1.5s ease-in-out;
+            padding-bottom: 100px; /* Extra bottom space */
         }
 
         .hero::after {
@@ -57,7 +60,7 @@
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             animation: fadeUp 2s ease-out;
-            margin-bottom: 20px;
+            margin-bottom: 50px; /* Spacing between sections */
         }
 
         @keyframes fadeUp {
@@ -65,27 +68,19 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        .logo {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
         .logo img {
             max-width: 160px;
             display: block;
             margin: auto;
-            filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.8));
         }
 
-        .hero h1 {
+        h1 {
             font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-        .hero p {
+        p {
             font-size: 1.2rem;
             margin-bottom: 25px;
         }
@@ -97,6 +92,7 @@
             border: none;
             cursor: pointer;
             font-size: 1.2rem;
+            margin-bottom: 15px;
             transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
         }
 
@@ -107,18 +103,17 @@
         }
 
         .secondary-links {
-            margin-top: 15px;
             display: flex;
             gap: 10px;
-            justify-content: center;
+            margin-top: 10px;
         }
 
         .secondary-links a {
+            display: inline-block;
             padding: 10px 20px;
-            color: #ff9900;
-            background-color: transparent;
             border: 2px solid #ff9900;
             border-radius: 5px;
+            color: #ff9900;
             text-decoration: none;
             font-size: 1rem;
             transition: background-color 0.3s, color 0.3s;
@@ -129,22 +124,27 @@
             color: black;
         }
 
-        .social-button {
+        .x-logo {
             margin-top: 20px;
         }
 
-        .social-button img {
+        .x-logo img {
             width: 50px;
             height: 50px;
-            transition: transform 0.2s ease-in-out;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
         }
 
-        .social-button img:hover {
-            transform: scale(1.1);
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
+            h1 {
                 font-size: 2.5rem;
             }
 
@@ -159,24 +159,9 @@
 
             .secondary-links {
                 flex-direction: column;
-                gap: 12px;
+                align-items: center;
+                gap: 5px;
             }
-
-            .secondary-links a {
-                width: 80%; 
-                margin: 0 auto;
-                text-align: center;
-            }
-        }
-
-        footer {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 0.9rem;
-            text-align: center;
         }
     </style>
 </head>
@@ -196,19 +181,19 @@
             </a>
 
             <div class="secondary-links">
-                <a href="https://www.amazon.ca/stores/page/6672646D-DC00-48E5-A62E-CF7719F47EEB" target="_blank">Browse Our Torch Lighter</a>
-                <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR" target="_blank">Visit Our Store</a>
+                <a href="https://www.amazon.ca/stores/page/6672646D-DC00-48E5-A62E-CF7719F47EEB?ingress=0&visitId=bee9639b-76f7-4076-bbf9-61b637c3c57a">Browse Our Torch Lighter</a>
+                <a href="https://www.amazon.ca/FYER-SPARX-Flexible-Butane-Lighter/dp/B0B82MH1QR/ref=pd_ci_mcx_mh_mcx_views_0">Visit Our Store</a>
             </div>
 
-            <div class="social-button">
-                <a href="https://x.com/FyerSparx_Ltd" target="_blank">
-                    <img src="./logo-white.png" alt="X.com Social Media Logo" />
+            <div class="x-logo">
+                <a href="https://x.com/FyerSparx_Ltd" target="_blank" rel="noopener noreferrer">
+                    <img src="./logo-white.png" alt="X.com Logo" />
                 </a>
             </div>
         </div>
-    </div>
 
-    <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
+        <footer>&copy; 2024 FYER SPARX. All rights reserved.</footer>
+    </div>
 </body>
 
 </html>
